@@ -12,14 +12,15 @@ public class HomeController {
         // Add any attributes needed for the landing page here
         model.addAttribute("title", "Welcome to My Personal Website");
         model.addAttribute("description", "This is a brief introduction to my personal " +
-                "website where you can find more about me, my projects, and my blog.");
+                "website where you can find more about me and my projects");
         return "index";
     }
 
     @GetMapping("/about")
     public String about(Model model) {
         model.addAttribute("title", "About Me");
-        model.addAttribute("description", "This page contains information about me, my background, skills, and interests.");
+        model.addAttribute("description", "Hi, my name is Ryan Sribar. I am a third year " +
+                "Computer Science and Economics student at the University of Virginia.");
         return "about";
     }
 }

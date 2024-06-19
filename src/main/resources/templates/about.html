@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #414141;
         }
         .container {
             width: 80%;
@@ -21,10 +21,10 @@
             color: #fff;
             padding-top: 30px;
             min-height: 70px;
-            border-bottom: #77aaff 3px solid;
+            border-bottom: #008080 3px solid;
         }
         header a, header h1 {
-            color: #fff;
+            color: #d3d3d3;
             text-decoration: none;
             text-transform: uppercase;
             font-size: 16px;
@@ -50,11 +50,12 @@
         }
         .content {
             padding: 20px;
-            background: #fff;
+            background: #414141;
             margin-top: 20px;
         }
         .content h1, .content p {
             margin-bottom: 20px;
+            color: #d3d3d3
         }
     </style>
 </head>
@@ -62,14 +63,13 @@
 <header>
     <div class="container">
         <div class="logo">
-            <h1>My Personal Website</h1>
+            <h1>Ryan Sribar</h1>
         </div>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About Me</a></li>
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="/blog">Blog</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
@@ -77,7 +77,8 @@
 </header>
 <div class="container content">
     <h1 th:text="${title}">About Me</h1>
-    <p th:text="${description}">This page contains information about me, my background, skills, and interests.</p>
+    <p th:text="${description}">Hi, my name is Ryan Sribar. I am a third year Computer Science and Economics student at
+        the University of Virginia.</p>
     <!-- Add more content about yourself here -->
 </div>
 </body>
