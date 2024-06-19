@@ -4,29 +4,42 @@
     <meta charset="UTF-8">
     <title th:text="${title}">Landing Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #414141;
+        header {
+            background: #333;
+            color: #d3d3d3;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            min-height: 70px;
+            border-bottom: #008080 4px solid;
+            position: sticky;
+            top: 0;
         }
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
         }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #008080 3px solid;
-        }
         header a, header h1 {
             color: #d3d3d3;
             text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
+            text-transform: lowercase;
+            font-size: 26px;
+        }
+        header .title {
+            float: left;
+            font-size: 26px;
+            text-transform: lowercase;
+            border-bottom: #008080 3px solid;
+        }
+        header .title h1 {
+            margin: 0;
+        }
+        header .title .page-title {
+            float: right;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
         }
         header ul {
             padding: 0;
@@ -35,17 +48,16 @@
         header li {
             float: right;
             display: inline;
-            padding: 0 20px 0 20px;
+            padding: 0 0 0 25px;
         }
-        header nav {
-            float: right;
-            margin-top: 10px;
+        header li:hover {
+            text-decoration: underline #008080;
         }
-        header .logo {
-            float: left;
-        }
-        header .logo h1 {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
+            padding: 0;
+            background-color: #414141;
         }
         .showcase {
             min-height: 400px;
@@ -67,13 +79,14 @@
 <body>
 <header>
     <div class="container">
-        <div class="logo">
-            <h1>Ryan Sribar</h1>
+        <div class="title">
+            <h1>ryansribar.info</h1>
+            <div class="page-title" th:text="${title}"></div>
         </div>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/about">About Me</a></li>
+                <li><a href="/about">About</a></li>
                 <li><a href="/projects">Projects</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
